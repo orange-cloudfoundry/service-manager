@@ -17,4 +17,8 @@ const (
 
 	// InfoURL is the path of the info endpoint
 	InfoURL = "/" + apiVersion + "/info"
+
+	VisibilityURL = "/" + apiVersion + "/service_visibilities"
+
+	PlansURL = "/" + apiVersion + "/service_plans"
 )

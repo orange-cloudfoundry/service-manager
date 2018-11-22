@@ -22,6 +22,9 @@ import (
 	"fmt"
 	"net/http"
 
+	"github.com/Peripli/service-manager/api/plans"
+	"github.com/Peripli/service-manager/api/visibility"
+
 	"github.com/Peripli/service-manager/api/broker"
 	"github.com/Peripli/service-manager/api/filters"
 	"github.com/Peripli/service-manager/api/filters/authn/basic"
@@ -103,6 +106,8 @@ func New(ctx context.Context, store storage.Storage, settings *Settings, encrypt
 				BrokerStorage: store.Broker(),
 				Encrypter:     encrypter,
 			}, http.DefaultTransport),
+			&visibility.Controller{},
+			&plans.Controller{},
 		},
 		// Default filters - more filters can be registered using the relevant API methods
 		Filters: []web.Filter{
