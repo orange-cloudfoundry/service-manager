@@ -35,11 +35,42 @@ func (c *Controller) getAllVisibilities(r *web.Request) (*web.Response, error) {
 
 	v := []*types.Visibility{
 		&types.Visibility{
-			ServicePlanGUID: "plan1-id",
+			CatalogPlanID: "1f400825-1434-5278-9913-dfcf63fcd647",
 			Labels: []*types.Label{
 				&types.Label{
 					Key:    "organization_guid",
-					Values: []string{"org1-guid", "org2-guid"},
+					Values: []string{"8c09d1a9-6acb-48a4-9b7f-bfbdb8373165", "8bc3cef7-7500-4af6-8689-38994632647e", "577ab247-805d-4f72-9c96-97e9a20d4dec"},
+				},
+				&types.Label{
+					Key:    "expiration",
+					Values: []string{"1h"},
+				},
+			},
+		},
+		&types.Visibility{
+			CatalogPlanID: "2f400825-1234-5278-9013-dfcf63fcd646",
+			Labels: []*types.Label{
+				&types.Label{
+					Key:    "organization_guid",
+					Values: []string{"8c09d1a9-6acb-48a4-9b7f-bfbdb8373165"},
+				},
+			},
+		},
+		&types.Visibility{
+			CatalogPlanID: "3f400825-1234-5278-2913-dfcf63fcd647",
+			Labels: []*types.Label{
+				&types.Label{
+					Key:    "organization_guid",
+					Values: []string{"8bc3cef7-7500-4af6-8689-38994632647e"},
+				},
+			},
+		},
+		&types.Visibility{
+			CatalogPlanID: "4f400825-1234-5278-9513-dfcf63fcd646",
+			Labels: []*types.Label{
+				&types.Label{
+					Key:    "organization_guid",
+					Values: []string{"8bc3cef7-7500-4af6-8689-38994632647e", "577ab247-805d-4f72-9c96-97e9a20d4dec"},
 				},
 				&types.Label{
 					Key:    "expiration",

@@ -21,7 +21,7 @@ type Visibilities struct {
 }
 
 type Visibility struct {
-	ServicePlanGUID string `json:"service_plan_guid"`
+	CatalogPlanID string `json:"service_plan_guid"`
 	Labels []*Label `json:"labels"`
 }
 

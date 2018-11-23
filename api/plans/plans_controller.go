@@ -35,7 +35,16 @@ func (c *Controller) getAllPlans(r *web.Request) (*web.Response, error) {
 
 	p := []*types.Plan{
 		&types.Plan{
-			CatalogID: "plan1-id",
+			CatalogID: "1f400825-1434-5278-9913-dfcf63fcd647",
+		},
+		&types.Plan{
+			CatalogID: "2f400825-1234-5278-9013-dfcf63fcd646",
+		},
+		&types.Plan{
+			CatalogID: "3f400825-1234-5278-2913-dfcf63fcd647",
+		},
+		&types.Plan{
+			CatalogID: "4f400825-1234-5278-9513-dfcf63fcd646",
 		},
 	}
 
