@@ -16,7 +16,9 @@
 
 package storage
 
-import "github.com/Peripli/service-manager/pkg/health"
+import (
+	"github.com/Peripli/service-manager/pkg/health"
+)
 
 // HealthIndicator returns a new indicator for the storage
 type HealthIndicator struct {

@@ -32,50 +32,50 @@ func (c *Controller) getAllVisibilities(r *web.Request) (*web.Response, error) {
 	ctx := r.Context()
 	log.C(ctx).Debug("Getting all brokers")
 	v := []*types.Visibility{
-		&types.Visibility{
-			CatalogPlanID: "1f400825-1434-5278-9913-dfcf63fcd647",
-			Labels: []*types.Label{
-				&types.Label{
-					Key:    "organization_guid",
-					Values: []string{"8c09d1a9-6acb-48a4-9b7f-bfbdb8373165", "8bc3cef7-7500-4af6-8689-38994632647e", "577ab247-805d-4f72-9c96-97e9a20d4dec"},
-				},
-				&types.Label{
-					Key:    "expiration",
-					Values: []string{"1h"},
-				},
-			},
-		},
+		// &types.Visibility{
+		// 	CatalogPlanID: "1f400825-1434-5278-9913-dfcf63fcd647",
+		// 	Labels: []*types.Label{
+		// 		&types.Label{
+		// 			Key:    "organization_guid",
+		// 			Values: []string{"2e82d700-8ac6-4304-96df-04e6e86284ac", "f9cfbaf5-8f9a-497e-b295-e6d377896e08"},
+		// 		},
+		// 		&types.Label{
+		// 			Key:    "expiration",
+		// 			Values: []string{"1h"},
+		// 		},
+		// 	},
+		// },
 		&types.Visibility{
 			CatalogPlanID: "2f400825-1234-5278-9013-dfcf63fcd646",
 			Labels: []*types.Label{
 				&types.Label{
 					Key:    "organization_guid",
-					Values: []string{"8c09d1a9-6acb-48a4-9b7f-bfbdb8373165"},
+					Values: []string{"2e82d700-8ac6-4304-96df-04e6e86284ac"},
 				},
 			},
 		},
-		&types.Visibility{
-			CatalogPlanID: "3f400825-1234-5278-2913-dfcf63fcd647",
-			Labels: []*types.Label{
-				&types.Label{
-					Key:    "organization_guid",
-					Values: []string{"8bc3cef7-7500-4af6-8689-38994632647e"},
-				},
-			},
-		},
-		&types.Visibility{
-			CatalogPlanID: "4f400825-1234-5278-9513-dfcf63fcd646",
-			Labels: []*types.Label{
-				&types.Label{
-					Key:    "organization_guid",
-					Values: []string{"8bc3cef7-7500-4af6-8689-38994632647e", "577ab247-805d-4f72-9c96-97e9a20d4dec"},
-				},
-				&types.Label{
-					Key:    "expiration",
-					Values: []string{"1h"},
-				},
-			},
-		},
+		// &types.Visibility{
+		// 	CatalogPlanID: "3f400825-1234-5278-2913-dfcf63fcd647",
+		// 	Labels: []*types.Label{
+		// 		&types.Label{
+		// 			Key:    "organization_guid",
+		// 			Values: []string{"2e82d700-8ac6-4304-96df-04e6e86284ac"},
+		// 		},
+		// 	},
+		// },
+		// &types.Visibility{
+		// 	CatalogPlanID: "4f400825-1234-5278-9513-dfcf63fcd646",
+		// 	Labels: []*types.Label{
+		// 		&types.Label{
+		// 			Key:    "organization_guid",
+		// 			Values: []string{"2e82d700-8ac6-4304-96df-04e6e86284ac"},
+		// 		},
+		// 		&types.Label{
+		// 			Key:    "expiration",
+		// 			Values: []string{"1h"},
+		// 		},
+		// 	},
+		// },
 	}
 	return util.NewJSONResponse(http.StatusOK, &types.Visibilities{
 		Visibilities: v,
